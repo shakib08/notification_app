@@ -1,6 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:notification_app/features/login/controller/login_controller.dart';
 
 class LoginView extends StatelessWidget {
@@ -92,7 +92,9 @@ class LoginView extends StatelessWidget {
                         ),
                         onPressed: () {
                           controller.loginUser();
-                          print('Gradient Button Pressed');
+                          if (kDebugMode) {
+                            print('Gradient Button Pressed');
+                          }
                         },
                         child: const Text(
                           'Login',
