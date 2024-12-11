@@ -1,9 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:notification_app/route/app_route.dart'; // Import the routes file
+import 'package:notification_app/firebase_options.dart';
+import 'package:notification_app/route/app_route.dart'; 
 
-void main() {
+void main() async {
   runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
 }
 
 class MyApp extends StatelessWidget {
