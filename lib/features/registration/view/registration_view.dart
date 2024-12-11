@@ -117,6 +117,7 @@ class RegistrationView extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
+                          controller.registerUser();
                           print('Gradient Button Pressed');
                         },
                         child: const Text(

@@ -91,6 +91,7 @@ class LoginView extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
+                          controller.loginUser();
                           print('Gradient Button Pressed');
                         },
                         child: const Text(
