@@ -1,6 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:notification_app/features/registration/controller/registration_controller.dart';
 
 class RegistrationView extends StatelessWidget {
@@ -118,7 +118,9 @@ class RegistrationView extends StatelessWidget {
                         ),
                         onPressed: () {
                           controller.registerUser();
-                          print('Gradient Button Pressed');
+                          if (kDebugMode) {
+                            print('Gradient Button Pressed');
+                          }
                         },
                         child: const Text(
                           'Register',
